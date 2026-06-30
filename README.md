@@ -1,4 +1,4 @@
-## Proyecto: Data Engineering Pipeline & Analytics (AdventureWorks)##
+## Proyecto: Data Engineering Pipeline & Analytics (AdventureWorks)
 Descripción
 Este proyecto implementa un flujo completo de Ingeniería de Datos (ETL), desde la generación y transformación de datos hasta la creación de un sistema de Business Intelligence (BI). El objetivo fue centralizar transacciones masivas de AdventureWorks en un Data Warehouse en la nube para habilitar la toma de decisiones basada en datos.
 
