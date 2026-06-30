@@ -1,42 +1,35 @@
-ETL Pipeline: AdventureWorks Analytics
-Proyecto de ingeniería de datos desarrollado para extraer, transformar y cargar (ETL) información masiva de transacciones, con un enfoque en calidad de datos, imputación analítica y despliegue en entornos en la nube.
+## Proyecto: Data Engineering Pipeline & Analytics (AdventureWorks)##
+Descripción
+Este proyecto implementa un flujo completo de Ingeniería de Datos (ETL), desde la generación y transformación de datos hasta la creación de un sistema de Business Intelligence (BI). El objetivo fue centralizar transacciones masivas de AdventureWorks en un Data Warehouse en la nube para habilitar la toma de decisiones basada en datos.
 
-🚀 Descripción del Proyecto
-Este pipeline automatiza el procesamiento de datos transaccionales simulados de AdventureWorks. El objetivo principal es transformar datos crudos en un esquema relacional estructurado, optimizado para el análisis financiero y la toma de decisiones. El flujo incluye la aplicación de reglas de negocio, manejo de valores nulos, generación de indicadores clave (KPIs) y carga en una base de datos PostgreSQL alojada en la nube (Render).
+## Stack tecnologico ##
 
-🛠 Tecnologías Utilizadas
-Lenguaje: Python 3.x
+Lenguajes: Python (Pandas, NumPy).
 
-Procesamiento de datos: Pandas, NumPy
+- Ingeniería Cloud: PostgreSQL alojado en Render (Infraestructura como servicio).
 
-Conectividad: SQLAlchemy (PostgreSQL)
+- Conectividad: SQLAlchemy (ORM para gestión de bases de datos).
 
-Infraestructura: Render (Cloud PostgreSQL)
+- Business Intelligence: Power BI (Modelado de datos, DAX y visualización).
 
-Entorno de desarrollo: Google Colab
-
-⚙️ Arquitectura del Pipeline (E-T-L)
-Extract (E): Generación y carga en memoria de 25,000 registros transaccionales con integridad referencial.
-
-Transform (T):
-
-Cruce de dimensiones (Productos vs. Ventas).
-
-Limpieza y estandarización de esquemas.
-
-Imputación de valores nulos basada en promedios estadísticos.
-
-Cálculo de métricas financieras: facturacion_bruta y ganancia_neta.
-
-Load (L): Inyección de datos estructurados hacia una instancia de PostgreSQL en la nube mediante un túnel seguro.
+- Versionado: Git & GitHub (Gestión del ciclo de vida del código).
 
 
-SEGURIDAD Y BUENAS PRACTICAS
-Manejo de Secretos: Este proyecto utiliza google.colab.userdata para la gestión segura de las credenciales de la base de datos, evitando la exposición de contraseñas en el código fuente.
+## Arquitctura del pipeline ##
+El flujo de datos sigue el estándar de la industria:
 
-Control de Versiones: Se han implementado archivos .gitignore para asegurar que archivos temporales, caché y variables de entorno no sean registrados en el historial del repositorio.
+- Extracción (Extract): Simulación de carga masiva de transacciones en memoria (RAM) mediante Python para asegurar independencia y agilidad.
 
-Resultados del Pipeline
-El proceso garantiza una ingesta de alta velocidad, validando los datos en tiempo real mediante un sistema de logging DevOps que monitorea cada fase de la ejecución, asegurando la trazabilidad del proceso desde la extracción hasta la persistencia final en PostgreSQL.
+- Transformación (Transform): Limpieza de datos, imputación de valores faltantes y cálculo de KPIs financieros clave (Facturación Bruta, Margen Neto).
 
+- Carga (Load): Ingesta estructurada hacia una base de datos PostgreSQL remota, utilizando protocolos SSL para garantizar la seguridad en tránsito.
 
+- Presentación (BI): Creación de un modelo de datos relacional en Power BI, utilizando una Tabla de Calendario dedicada para habilitar la Inteligencia de Tiempo (Time Intelligence).
+
+## Hallazgos y Resultados ##
+
+- Optimización de Datos: Se logró transformar miles de transacciones crudas en un modelo relacional limpio, listo para visualización.
+
+- Inteligencia de Tiempo: Gracias al modelado con CALENDARAUTO(), el sistema permite comparativas temporales avanzadas (Año contra Año, tendencia mensual).
+
+- Despliegue Cloud: El pipeline demuestra capacidad para operar en entornos cloud remotos, manejando credenciales y conexiones seguras.
