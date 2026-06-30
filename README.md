@@ -30,14 +30,8 @@ Cálculo de métricas financieras: facturacion_bruta y ganancia_neta.
 
 Load (L): Inyección de datos estructurados hacia una instancia de PostgreSQL en la nube mediante un túnel seguro.
 
-ESTRUCTURA DEL REPOSITORIO
 
-etl-adventureworks-pipeline/
-├── NOTEBOOK/
-│   └── PROYECTO_REAL_ETL.ipynb    # Pipeline principal (ETL)
-├── .gitignore                     # Archivos excluidos (entornos y secretos)
-└── README.md                      # Documentación del proyecto
-Seguridad y Buenas Prácticas
+SEGURIDAD Y BUENAS PRACTICAS
 Manejo de Secretos: Este proyecto utiliza google.colab.userdata para la gestión segura de las credenciales de la base de datos, evitando la exposición de contraseñas en el código fuente.
 
 Control de Versiones: Se han implementado archivos .gitignore para asegurar que archivos temporales, caché y variables de entorno no sean registrados en el historial del repositorio.
