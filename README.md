@@ -15,7 +15,7 @@ Lenguajes: Python (Pandas, NumPy).
 - Versionado: Git & GitHub (Gestión del ciclo de vida del código).
 
 
-## Arquitctura del pipeline ##
+## Arquitectura del pipeline ##
 El flujo de datos sigue el estándar de la industria:
 
 - Extracción (Extract): Simulación de carga masiva de transacciones en memoria (RAM) mediante Python para asegurar independencia y agilidad.
@@ -24,12 +24,10 @@ El flujo de datos sigue el estándar de la industria:
 
 - Carga (Load): Ingesta estructurada hacia una base de datos PostgreSQL remota, utilizando protocolos SSL para garantizar la seguridad en tránsito.
 
-- Presentación (BI): Creación de un modelo de datos relacional en Power BI, utilizando una Tabla de Calendario dedicada para habilitar la Inteligencia de Tiempo (Time Intelligence).
+- Presentación (BI): Creación de un modelo de datos relacional en Power BI.
 
 ## Hallazgos y Resultados ##
 
 - Optimización de Datos: Se logró transformar miles de transacciones crudas en un modelo relacional limpio, listo para visualización.
-
-- Inteligencia de Tiempo: Gracias al modelado con CALENDARAUTO(), el sistema permite comparativas temporales avanzadas (Año contra Año, tendencia mensual).
 
 - Despliegue Cloud: El pipeline demuestra capacidad para operar en entornos cloud remotos, manejando credenciales y conexiones seguras.
