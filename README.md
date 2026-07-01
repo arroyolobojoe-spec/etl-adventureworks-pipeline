@@ -1,33 +1,32 @@
-## Proyecto: Data Engineering Pipeline & Analytics (AdventureWorks) ##
-Descripción
-Este proyecto implementa un flujo completo de Ingeniería de Datos (ETL), desde la generación y transformación de datos hasta la creación de un sistema de Business Intelligence (BI). El objetivo fue centralizar transacciones masivas de AdventureWorks en un Data Warehouse en la nube para habilitar la toma de decisiones basada en datos.
+Proyecto: Pipeline de Datos Escalable para Análisis Financiero (AdventureWorks)
+Descripción del Proyecto Este proyecto fue desarrollado para resolver la necesidad de centralizar y visualizar datos transaccionales masivos. El desafío principal fue superar las limitaciones de red e infraestructura para construir un Data Warehouse (DWH) en la nube funcional y escalable, capaz de soportar análisis de inteligencia de negocios.
 
-## Stack tecnologico ##
+Pipeline ETL (Extract, Transform, Load)
+El pipeline fue diseñado bajo una arquitectura de ingeniería de datos moderna:
 
-Lenguajes: Python (Pandas, NumPy).
+Extracción: Generación de datos sintéticos masivos mediante Python (Pandas y NumPy) en memoria para asegurar la disponibilidad inmediata de la fuente.
 
-- Ingeniería Cloud: PostgreSQL alojado en Render (Infraestructura como servicio).
+Transformación: Aplicación de reglas de negocio para el cálculo de métricas financieras (Facturación Bruta, Ganancia Neta) y normalización de tipos de datos para asegurar la integridad financiera.
 
-- Conectividad: SQLAlchemy (ORM para gestión de bases de datos).
+Carga: Ingesta de datos hacia una instancia de PostgreSQL alojada en la nube (Render), garantizando la persistencia y seguridad mediante protocolos SSL.
 
-- Business Intelligence: Power BI (Modelado de datos, DAX y visualización).
+Tecnologías Utilizadas
+Python: Orquestación del pipeline, transformación de datos y automatización de procesos.
 
-- Versionado: Git & GitHub (Gestión del ciclo de vida del código).
+PostgreSQL (Render): Data Warehouse centralizado y escalable en la nube.
 
+Power BI: Capa de visualización y análisis interactivo (BI).
 
-## Arquitectura del pipeline ##
-El flujo de datos sigue el estándar de la industria:
+SQLAlchemy: Gestión de conexiones seguras entre el pipeline y el servidor de base de datos.
 
-- Extracción (Extract): Simulación de carga masiva de transacciones en memoria (RAM) mediante Python para asegurar independencia y agilidad.
+Visualizaciones
+Dashboard principal mostrando la tendencia de facturación y el margen de beneficio por producto. Esquema relacional optimizado, incluyendo la Tabla de Calendario para análisis temporal.
 
-- Transformación (Transform): Limpieza de datos, imputación de valores faltantes y cálculo de KPIs financieros clave (Facturación Bruta, Margen Neto).
+Conclusiones e Insights
+Tras el modelado y visualización, se obtuvieron los siguientes hallazgos:
 
-- Carga (Load): Ingesta estructurada hacia una base de datos PostgreSQL remota, utilizando protocolos SSL para garantizar la seguridad en tránsito.
+Tendencia de Crecimiento: La visualización de la serie temporal permitió identificar periodos pico de facturación que no eran evidentes en los datos crudos.
 
-- Presentación (BI): Creación de un modelo de datos relacional en Power BI.
+Análisis de Rentabilidad: Se detectaron productos de alto volumen pero baja rentabilidad, lo que permite proponer estrategias de optimización de costos o ajustes de precios.
 
-## Hallazgos y Resultados ##
-
-- Optimización de Datos: Se logró transformar miles de transacciones crudas en un modelo relacional limpio, listo para visualización.
-
-- Despliegue Cloud: El pipeline demuestra capacidad para operar en entornos cloud remotos, manejando credenciales y conexiones seguras.
+Eficiencia del Pipeline: La automatización del flujo ETL redujo drásticamente el tiempo de preparación de datos, permitiendo que el reporte se actualice de forma dinámica directamente desde la fuente en la nube.
